@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧵</text></svg>">
+<title>Ariadne — Privacy Policy</title>
+<style>
+  /* Ariadne's own two grounds. Loom is the base; Nocturne takes over in dark.
+     The accent changes with the theme because the app's does — Loom is
+     blue-accented, Nocturne gold. */
+  :root {
+    --bg: #fbfbfa;
+    --panel: #f4f4f3;
+    --ink: #17171a;
+    --muted: #63636b;
+    --faint: #9a9aa2;
+    --line: #e4e4e1;
+    --accent: #3b4cf0;
+    --serif: 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171512;
+      --panel: #1f1c18;
+      --ink: #ebe7df;
+      --muted: #9c9488;
+      --faint: #6b6459;
+      --line: #2b2822;
+      --accent: #d9ad55;
+    }
+  }
+
+  :root[data-theme='dark'] {
+    --bg: #171512;
+    --panel: #1f1c18;
+    --ink: #ebe7df;
+    --muted: #9c9488;
+    --faint: #6b6459;
+    --line: #2b2822;
+    --accent: #d9ad55;
+  }
+
+  :root[data-theme='light'] {
+    --bg: #fbfbfa;
+    --panel: #f4f4f3;
+    --ink: #17171a;
+    --muted: #63636b;
+    --faint: #9a9aa2;
+    --line: #e4e4e1;
+    --accent: #3b4cf0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.68;
+    margin: 0;
+    padding: clamp(2.5rem, 7vw, 5.5rem) 1.5rem 6rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 41rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+  }
+
+  /* ---- masthead ---- */
+
+  header { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 6vw, 2.9rem);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .dateline {
+    font-family: var(--sans);
+    font-size: 0.8125rem;
+    color: var(--faint);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---- the short version ---- */
+  /* A hairline in the margin, borrowed from the app's "Rule" thread style. */
+
+  .summary {
+    border-left: 2px solid var(--accent);
+    padding: 0.25rem 0 0.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .summary p { margin: 0; }
+
+  .summary strong { font-weight: 600; }
+
+  /* ---- sections ---- */
+
+  section { display: flex; flex-direction: column; gap: 0.9rem; }
+
+  h2 {
+    font-family: var(--sans);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  p { margin: 0; }
+
+  ul {
+    margin: 0;
+    padding-left: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  li::marker { color: var(--faint); }
+
+  a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .note {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 1.1rem 1.3rem;
+    font-size: 0.9688rem;
+    color: var(--muted);
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.8125rem;
+    color: var(--faint);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .fill {
+    font-family: var(--sans);
+    font-size: 0.9375rem;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border-radius: 2px;
+    padding: 0.1em 0.4em;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="eyebrow">Ariadne</div>
+    <h1>Privacy Policy</h1>
+    <div class="dateline">Effective 26 July 2026</div>
+  </header>
+
+  <div class="summary">
+    <p><strong>Ariadne collects nothing.</strong> Your journal is written to your own Mac and stays there.</p>
+    <p>There is no account to create, no server to sign in to, and no analytics. The app makes no network requests at all — not one, not even to load its fonts.</p>
+  </div>
+
+  <section>
+    <h2>What Ariadne stores</h2>
+    <p>Everything you write — your entries, their dates, your threads and their colours, and your appearance settings — is saved in Ariadne's own private storage on your Mac.</p>
+    <p>That storage belongs to the app and to your user account on your computer. Nothing in it is transmitted anywhere.</p>
+  </section>
+
+  <section>
+    <h2>What Ariadne sends</h2>
+    <p>Nothing. Ariadne has no networking of any kind. Its fonts, styles and code are bundled inside the app, so it works identically with your Mac disconnected from the internet.</p>
+    <p>There is no telemetry, no crash reporting, no usage analytics, no advertising, and no third-party software development kits.</p>
+  </section>
+
+  <section>
+    <h2>No account, no profile</h2>
+    <p>Ariadne never asks for your name, your email address, or any other identifying detail, because it has nothing to do with them. There is no profile associated with your use of the app.</p>
+  </section>
+
+  <section>
+    <h2>Exporting your journal</h2>
+    <p>Ariadne can export your entire journal as a single file. That file is created by you, saved where you choose, and never sent anywhere by the app.</p>
+    <p>Once it leaves Ariadne, it is an ordinary document on your Mac. If you put it in a shared folder or a cloud drive, that service's privacy terms apply to it — not this policy.</p>
+  </section>
+
+  <section>
+    <h2>Deleting your data</h2>
+    <p>Delete individual entries inside Ariadne, or remove the app to remove its storage along with it. There is no server copy, so there is nothing to request the deletion of and no one to ask.</p>
+    <p>Export first if you want to keep your writing. Deleting the app deletes the journal.</p>
+  </section>
+
+  <section>
+    <h2>Children</h2>
+    <p>Ariadne is suitable for all ages. It collects no personal information from anyone, including children under 13.</p>
+  </section>
+
+  <section>
+    <h2>If syncing is added later</h2>
+    <div class="note">
+      Ariadne does not sync between devices today, and this policy describes the app as it is now.
+    </div>
+    <p>Optional syncing is planned. If it ships, it will require an account you choose to create, it will be end-to-end encrypted so that entries are unreadable on the server, and this policy will be updated to describe it before it becomes available. Ariadne will not begin transmitting anything under this version of the policy.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the effective date at the top will change with it, and the revised policy will be published here before the change takes effect in the app.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about privacy in Ariadne can go to <a class="fill" href="mailto:cq.feedback@gmail.com">cq.feedback@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    <div>Ariadne — a plain-text journal you can reread by thread.</div>
+    <div>© 2026</div>
+  </footer>
+</div>
+</body>
+</html>

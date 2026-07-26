@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧵</text></svg>">
+<title>Ariadne — Support</title>
+<style>
+  /* Same two grounds as the app, and the same accent behaviour: Loom is
+     blue-accented, Nocturne gold. Section markers are written as #tags because
+     that is the app's own vernacular — a support page organised into threads. */
+  :root {
+    --bg: #fbfbfa;
+    --panel: #f4f4f3;
+    --ink: #17171a;
+    --muted: #63636b;
+    --faint: #9a9aa2;
+    --line: #e4e4e1;
+    --accent: #3b4cf0;
+    --serif: 'Iowan Old Style', Georgia, 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171512;
+      --panel: #1f1c18;
+      --ink: #ebe7df;
+      --muted: #9c9488;
+      --faint: #6b6459;
+      --line: #2b2822;
+      --accent: #d9ad55;
+    }
+  }
+
+  :root[data-theme='dark'] {
+    --bg: #171512;
+    --panel: #1f1c18;
+    --ink: #ebe7df;
+    --muted: #9c9488;
+    --faint: #6b6459;
+    --line: #2b2822;
+    --accent: #d9ad55;
+  }
+
+  :root[data-theme='light'] {
+    --bg: #fbfbfa;
+    --panel: #f4f4f3;
+    --ink: #17171a;
+    --muted: #63636b;
+    --faint: #9a9aa2;
+    --line: #e4e4e1;
+    --accent: #3b4cf0;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.0625rem;
+    line-height: 1.68;
+    margin: 0;
+    padding: clamp(2.5rem, 7vw, 5.5rem) 1.5rem 6rem;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  header { display: flex; flex-direction: column; gap: 0.75rem; }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1 {
+    font-size: clamp(2.1rem, 6vw, 2.9rem);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  .lede { color: var(--muted); margin: 0; }
+
+  /* ---- contents ---- */
+
+  nav.toc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  nav.toc a {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    color: var(--muted);
+    text-decoration: none;
+    padding: 0.22em 0.55em;
+    border-radius: 3px;
+    background: var(--panel);
+    border: 1px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+  }
+
+  nav.toc a:hover,
+  nav.toc a:focus-visible {
+    color: var(--accent);
+    border-color: color-mix(in srgb, var(--accent) 35%, transparent);
+    outline: none;
+  }
+
+  /* ---- sections ---- */
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    scroll-margin-top: 2rem;
+  }
+
+  .tag {
+    font-family: var(--mono);
+    font-size: 0.8125rem;
+    color: var(--accent);
+    background: color-mix(in srgb, var(--accent) 11%, transparent);
+    border-radius: 3px;
+    padding: 0.2em 0.5em;
+    align-self: flex-start;
+  }
+
+  h2 {
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  h3 {
+    font-family: var(--sans);
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin: 0.6rem 0 0;
+  }
+
+  p { margin: 0; }
+
+  ul {
+    margin: 0;
+    padding-left: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  li::marker { color: var(--faint); }
+
+  a { color: var(--accent); text-underline-offset: 0.2em; }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ---- example journal text ---- */
+
+  .example {
+    background: var(--panel);
+    border-left: 2px solid var(--accent);
+    border-radius: 0 3px 3px 0;
+    padding: 1.1rem 1.3rem;
+    font-size: 0.9688rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+
+  .example b { color: var(--accent); font-weight: 400; }
+
+  code {
+    font-family: var(--mono);
+    font-size: 0.875em;
+    background: var(--panel);
+    border-radius: 3px;
+    padding: 0.12em 0.36em;
+  }
+
+  /* ---- shortcuts ---- */
+
+  .keys {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.65rem 1.25rem;
+    align-items: baseline;
+  }
+
+  kbd {
+    font-family: var(--sans);
+    font-size: 0.8125rem;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 0.18em 0.5em;
+    white-space: nowrap;
+    justify-self: start;
+  }
+
+  .keys span { font-size: 0.9688rem; }
+
+  .note {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 1.1rem 1.3rem;
+    font-size: 0.9688rem;
+    color: var(--muted);
+  }
+
+  .fill {
+    font-family: var(--sans);
+    font-size: 0.9375rem;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+    border-radius: 2px;
+    padding: 0.1em 0.4em;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.8125rem;
+    color: var(--faint);
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="eyebrow">Ariadne</div>
+    <h1>Support</h1>
+    <p class="lede">A plain-text journal you can reread by thread. Everything below is about the Mac app.</p>
+  </header>
+
+  <nav class="toc">
+    <a href="#threads">#threads</a>
+    <a href="#writing">#writing</a>
+    <a href="#reading">#reading</a>
+    <a href="#keys">#keys</a>
+    <a href="#backup">#backup</a>
+    <a href="#moving">#moving</a>
+    <a href="#trouble">#trouble</a>
+    <a href="#contact">#contact</a>
+  </nav>
+
+  <section id="threads">
+    <span class="tag">#threads</span>
+    <h2>How threads work</h2>
+    <p>Write a <code>#tag</code> anywhere in an entry and that writing joins a thread. Open the thread and you get everything you have ever written under it, in order, on one page.</p>
+    <p>There are no threads to set up in advance. You make one by typing it.</p>
+
+    <h3>Tag a single paragraph</h3>
+    <p>A tag anywhere inside an ordinary paragraph tags that paragraph and nothing else.</p>
+    <div class="example">Slept badly, then swam anyway. <b>#swim</b> 1.5km and it felt like three.</div>
+
+    <h3>Start a section</h3>
+    <p>A line that <em>begins</em> with a tag opens a section. Everything below it belongs to that thread — including blank lines and the paragraphs that follow — until the next line that starts with a tag.</p>
+    <div class="example"><b>#swim</b> 2km before eight.
+
+The pool was empty the whole way, which never happens on a Thursday.
+
+<b>#food</b> Lemon pasta again.</div>
+
+    <h3>End a section</h3>
+    <p>A line of three or more dashes closes the current section, so what follows is untagged again.</p>
+    <div class="example"><b>#swim</b> Easy 1km.
+
+---
+
+Back to no thread in particular.</div>
+
+    <h3>Nest related threads</h3>
+    <p>Use a slash to nest. <code>#swim/race</code> is its own thread and also rolls up into <code>#swim</code>, so you can keep the detail without losing the overview.</p>
+  </section>
+
+  <section id="writing">
+    <span class="tag">#writing</span>
+    <h2>Writing</h2>
+    <p>Ariadne opens on today. The date is the entry's title until you give it one of your own, and there is nothing to choose before you can start typing — no blocks, no fields, no templates.</p>
+    <p>Click the date to jump to another day. Each day can also carry a weather and a mood mark, both optional.</p>
+    <p>You can change how tagged text looks while you write, in Settings: <strong>Wash</strong> tints the passage, <strong>Rule</strong> marks it with a hairline in the margin, and <strong>Minimal</strong> shows a quiet label instead.</p>
+  </section>
+
+  <section id="reading">
+    <span class="tag">#reading</span>
+    <h2>Rereading</h2>
+    <ul>
+      <li><strong>Threads</strong> — pick any thread in the sidebar to read it start to finish.</li>
+      <li><strong>Overview</strong> — a year of writing as a heatmap coloured by thread, plus a month calendar and a per-thread timeline. Filter to one thread, or several.</li>
+      <li><strong>Read</strong> — one day per page with everything else out of the way. Arrow keys turn the page; Escape leaves.</li>
+      <li><strong>Search</strong> — every word you have written, including inside tags.</li>
+    </ul>
+  </section>
+
+  <section id="keys">
+    <span class="tag">#keys</span>
+    <h2>Keyboard shortcuts</h2>
+    <div class="keys">
+      <kbd>⌘F</kbd><span>Search your journal</span>
+      <kbd>⌘,</kbd><span>Settings</span>
+      <kbd>⌘Z</kbd><span>Undo — and ⇧⌘Z to redo</span>
+      <kbd>⌃⌘F</kbd><span>Full screen</span>
+      <kbd>Esc</kbd><span>Leave Read mode or close a menu</span>
+      <kbd>← →</kbd><span>Turn the page in Read mode</span>
+    </div>
+  </section>
+
+  <section id="backup">
+    <span class="tag">#backup</span>
+    <h2>Where your journal lives, and how to back it up</h2>
+    <p>Ariadne keeps everything on your Mac, in the app's own private storage. Nothing is sent anywhere — see the <a href="privacy.html">privacy policy</a>.</p>
+    <p>The consequence is worth being clear about: <strong>deleting the app deletes the journal.</strong> There is no server copy to restore from.</p>
+    <p>So export regularly. <strong>Settings → Export</strong> saves your whole journal — every entry, every thread and its colour — as a single file you choose the location for. Keep it somewhere you already back up.</p>
+    <div class="note">Importing never destroys anything. A day the file does not mention is left alone, and an incoming entry only replaces a local one if it is genuinely newer — so restoring an old backup over newer writing cannot cost you the newer writing.</div>
+  </section>
+
+  <section id="moving">
+    <span class="tag">#moving</span>
+    <h2>Moving to a new Mac</h2>
+    <ul>
+      <li>On the old Mac, choose <strong>Settings → Export</strong> and save the file.</li>
+      <li>Copy it across however you like.</li>
+      <li>On the new Mac, install Ariadne and choose <strong>Settings → Import</strong>.</li>
+    </ul>
+    <p>Your entries, threads and thread colours all come across.</p>
+  </section>
+
+  <section id="trouble">
+    <span class="tag">#trouble</span>
+    <h2>If something goes wrong</h2>
+
+    <h3>My entries are gone</h3>
+    <p>Check that you are signed in to the same macOS user account — Ariadne's storage belongs to your user account, so another account on the same Mac has its own empty journal. If you have an export, <strong>Settings → Import</strong> will restore it without harming anything already there.</p>
+
+    <h3>Import says the file isn't a Ariadne journal</h3>
+    <p>Ariadne imports the file its own Export produces. If the file has been edited by hand and is no longer valid, the app will refuse it rather than import something broken.</p>
+
+    <h3>A tag isn't creating a thread</h3>
+    <p>Tags must start with a letter or a number — <code>#swim</code> and <code>#2026</code> work, <code>#_swim</code> does not. Tags are also case-insensitive, so <code>#Swim</code> and <code>#swim</code> are the same thread.</p>
+
+    <h3>The app looks wrong after an update</h3>
+    <p>Quit and reopen it. If that doesn't help, get in touch and describe what you see — and export first if you can.</p>
+  </section>
+
+  <section id="contact">
+    <span class="tag">#contact</span>
+    <h2>Getting in touch</h2>
+    <p>Email <a class="fill" href="mailto:cq.feedback@gmail.com">cq.feedback@gmail.com</a>. It helps to include your macOS version, the version of Ariadne from the About panel, and what you expected to happen.</p>
+    <p>Ariadne does not sync between devices yet. Optional, end-to-end encrypted syncing is planned.</p>
+  </section>
+
+  <footer>
+    <div><a href="privacy.html">Privacy policy</a></div>
+    <div>© 2026</div>
+  </footer>
+</div>
+</body>
+</html>
