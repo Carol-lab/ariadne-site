@@ -192,29 +192,39 @@
   <header>
     <div class="eyebrow">Ariadne</div>
     <h1>Privacy Policy</h1>
-    <div class="dateline">Effective 26 July 2026</div>
+    <div class="dateline">Effective 1 September 2026 · for Ariadne 0.2 and later</div>
   </header>
 
   <div class="summary">
     <p><strong>Ariadne collects nothing.</strong> Your journal is written to your own Mac and stays there.</p>
-    <p>There is no account to create, no server to sign in to, and no analytics. The app makes no network requests at all — not one, not even to load its fonts.</p>
+    <p>There is no account to create, no server of ours to sign in to, and no analytics. Unless you turn on iCloud sync, the app makes no network requests at all — not one, not even to load its fonts. With sync on, it talks to exactly one place: your own iCloud.</p>
   </div>
 
   <section>
     <h2>What Ariadne stores</h2>
     <p>Everything you write — your entries, their dates, your threads and their colours, and your appearance settings — is saved in Ariadne's own private storage on your Mac.</p>
-    <p>That storage belongs to the app and to your user account on your computer. Nothing in it is transmitted anywhere.</p>
+    <p>That storage belongs to the app and to your user account on your computer. Nothing in it is transmitted anywhere unless you turn on iCloud sync, described below.</p>
   </section>
 
   <section>
     <h2>What Ariadne sends</h2>
-    <p>Nothing. Ariadne has no networking of any kind. Its fonts, styles and code are bundled inside the app, so it works identically with your Mac disconnected from the internet.</p>
-    <p>There is no telemetry, no crash reporting, no usage analytics, no advertising, and no third-party software development kits.</p>
+    <p>With iCloud sync off — how every install starts — nothing. Ariadne's fonts, styles and code are bundled inside the app, so it works identically with your Mac disconnected from the internet.</p>
+    <p>There is no telemetry, no crash reporting, no usage analytics, no advertising, and no third-party software development kits. That stays true with sync on.</p>
+  </section>
+
+  <section>
+    <h2>iCloud sync, if you turn it on</h2>
+    <div class="note">
+      Sync is off until you switch it on in Settings, and everything in this section applies only after you do.
+    </div>
+    <p>Sync exists so the same journal can follow you between your own devices. It uses Apple's iCloud — the account already on your Mac — so there is still no Ariadne account, and your writing never touches a server of ours; we could not read it even in transit, because it never passes through us.</p>
+    <p>Your entries, threads and appearance settings are stored in your iCloud's private database, encrypted by Apple's CloudKit encrypted-fields mechanism with keys that travel in your iCloud Keychain, between your devices. Apple hosts the ciphertext; the keys stay yours.</p>
+    <p>Turning sync off stops all of it, immediately: the app goes back to making no network requests, and your journal remains, whole, on the Mac in front of you. Removing Ariadne's data from iCloud (in System Settings) removes the synced copy without touching what is written on any of your Macs.</p>
   </section>
 
   <section>
     <h2>No account, no profile</h2>
-    <p>Ariadne never asks for your name, your email address, or any other identifying detail, because it has nothing to do with them. There is no profile associated with your use of the app.</p>
+    <p>Ariadne never asks for your name, your email address, or any other identifying detail, because it has nothing to do with them. There is no profile associated with your use of the app. iCloud sync uses the Apple&nbsp;ID already signed into your Mac; Ariadne never sees its password and creates nothing new.</p>
   </section>
 
   <section>
@@ -225,7 +235,7 @@
 
   <section>
     <h2>Deleting your data</h2>
-    <p>Delete individual entries inside Ariadne, or remove the app to remove its storage along with it. There is no server copy, so there is nothing to request the deletion of and no one to ask.</p>
+    <p>Delete individual entries inside Ariadne, or remove the app to remove its storage along with it. With sync off there is no server copy at all. With sync on, the only copy beyond your devices is in your own iCloud, and System Settings can delete it — there is still no one to ask but yourself.</p>
     <p>Export first if you want to keep your writing. Deleting the app deletes the journal.</p>
   </section>
 
@@ -235,11 +245,8 @@
   </section>
 
   <section>
-    <h2>If syncing is added later</h2>
-    <div class="note">
-      Ariadne does not sync between devices today, and this policy describes the app as it is now.
-    </div>
-    <p>Optional syncing is planned. If it ships, it will require an account you choose to create, it will be end-to-end encrypted so that entries are unreadable on the server, and this policy will be updated to describe it before it becomes available. Ariadne will not begin transmitting anything under this version of the policy.</p>
+    <h2>What this policy used to promise</h2>
+    <p>Earlier versions of this policy said that if syncing ever shipped, it would be optional, encrypted so entries are unreadable on the server, and described here before it became available. Sync shipped in 0.2 on those terms — with one improvement on the promise: instead of an account you create, it uses the iCloud account you already have.</p>
   </section>
 
   <section>
