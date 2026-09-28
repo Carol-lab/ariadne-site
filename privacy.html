@@ -192,7 +192,7 @@
   <header>
     <div class="eyebrow">Ariadne</div>
     <h1>Privacy Policy</h1>
-    <div class="dateline">Effective 1 September 2026 · for Ariadne 0.2 and later</div>
+    <div class="dateline">Effective 28 September 2026 · for Ariadne 0.2 and later</div>
   </header>
 
   <div class="summary">
@@ -219,6 +219,7 @@
     </div>
     <p>Sync exists so the same journal can follow you between your own devices. It uses Apple's iCloud — the account already on your Mac — so there is still no Ariadne account, and your writing never touches a server of ours; we could not read it even in transit, because it never passes through us.</p>
     <p>Your entries, threads and appearance settings are stored in your iCloud's private database, encrypted by Apple's CloudKit encrypted-fields mechanism with keys that travel in your iCloud Keychain, between your devices. Apple hosts the ciphertext; the keys stay yours.</p>
+    <p>What iCloud can see: the contents of your entries and threads are encrypted, but the labels they are filed under are not. Each day is stored under its date, so Apple can tell <em>which days</em> you wrote, though not a word of what you wrote. Each thread is stored under a one-way hash of its name — not the name itself, but a short common name could be guessed by testing candidates against it. Nothing else about your journal is exposed: not its text, not your titles, not your colours.</p>
     <p>Turning sync off stops all of it, immediately: the app goes back to making no network requests, and your journal remains, whole, on the Mac in front of you. Removing Ariadne's data from iCloud (in System Settings) removes the synced copy without touching what is written on any of your Macs.</p>
   </section>
 
@@ -246,7 +247,7 @@
 
   <section>
     <h2>What this policy used to promise</h2>
-    <p>Earlier versions of this policy said that if syncing ever shipped, it would be optional, encrypted so entries are unreadable on the server, and described here before it became available. Sync shipped in 0.2 on those terms — with one improvement on the promise: instead of an account you create, it uses the iCloud account you already have.</p>
+    <p>Earlier versions of this policy said that if syncing ever shipped, it would be optional, encrypted so entries are unreadable on the server, and described here before it became available. Sync shipped in 0.2 on those terms — with one improvement on the promise: instead of an account you create, it uses the iCloud account you already have. The 28 September 2026 revision adds no new data collection; it spells out the filing metadata described above, which was true of sync from the day it shipped.</p>
   </section>
 
   <section>
