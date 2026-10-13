@@ -265,7 +265,7 @@
   <header>
     <div class="eyebrow">Ariadne</div>
     <h1>Support</h1>
-    <p class="lede">A plain-text journal you can reread by thread. Everything below is about the Mac app.</p>
+    <p class="lede">A plain-text journal you can reread by thread. Everything below applies on Mac, iPhone and iPad; where they differ, it says so.</p>
   </header>
 
   <nav class="toc">
@@ -313,7 +313,7 @@ Back to no thread in particular.</div>
     <span class="tag">#writing</span>
     <h2>Writing</h2>
     <p>Ariadne opens on today. The date is the entry's title until you give it one of your own, and there is nothing to choose before you can start typing — no blocks, no fields, no templates.</p>
-    <p>Click the date to jump to another day. Each day can also carry a weather and a mood mark, both optional.</p>
+    <p>Click the date to jump to another day — on iPhone, tap it for a calendar, or swipe sideways to walk from day to day. On Mac and iPad, each day can also carry a weather and a mood mark, both optional.</p>
     <p>You can change how tagged text looks while you write, in Settings: <strong>Wash</strong> tints the passage, <strong>Rule</strong> marks it with a hairline in the margin, and <strong>Minimal</strong> shows a quiet label instead.</p>
   </section>
 
@@ -321,16 +321,16 @@ Back to no thread in particular.</div>
     <span class="tag">#reading</span>
     <h2>Rereading</h2>
     <ul>
-      <li><strong>Threads</strong> — pick any thread in the sidebar to read it start to finish.</li>
-      <li><strong>Overview</strong> — a year of writing as a heatmap coloured by thread, plus a month calendar and a per-thread timeline. Filter to one thread, or several.</li>
-      <li><strong>Read</strong> — one day per page with everything else out of the way. Arrow keys turn the page; Escape leaves.</li>
+      <li><strong>Threads</strong> — pick any thread in the sidebar to read it start to finish. On iPhone, the threads are in the archive, behind the button at the top left; tapping a thread under a day’s title opens it too.</li>
+      <li><strong>Overview</strong> — a year of writing as a heatmap coloured by thread, plus a month calendar and a per-thread timeline. Filter to one thread, or several. On iPhone, the archive shows the year’s heatmap and your totals.</li>
+      <li><strong>Read</strong> (Mac and iPad) — one day per page with everything else out of the way. Arrow keys or the arrows at the edges turn the page; Escape, or the Esc cap in the corner, leaves.</li>
       <li><strong>Search</strong> — every word you have written, including inside tags.</li>
     </ul>
   </section>
 
   <section id="keys">
     <span class="tag">#keys</span>
-    <h2>Keyboard shortcuts</h2>
+    <h2>Keyboard shortcuts, on a Mac</h2>
     <div class="keys">
       <kbd>⌘F</kbd><span>Search your journal</span>
       <kbd>⌘,</kbd><span>Settings</span>
@@ -344,21 +344,21 @@ Back to no thread in particular.</div>
   <section id="backup">
     <span class="tag">#backup</span>
     <h2>Where your journal lives, and how to back it up</h2>
-    <p>Ariadne keeps everything on your Mac, in the app's own private storage. Nothing is sent anywhere — see the <a href="privacy.html">privacy policy</a>.</p>
-    <p>The consequence is worth being clear about: <strong>deleting the app deletes the journal on that Mac.</strong> Unless iCloud sync is on, there is no other copy to restore from.</p>
-    <p>So export regularly. <strong>Settings → Export</strong> saves your whole journal — every entry, every thread and its colour — as a single file you choose the location for. Keep it somewhere you already back up.</p>
+    <p>Ariadne keeps everything on your device, in the app's own private storage. Nothing is sent anywhere — see the <a href="privacy.html">privacy policy</a>.</p>
+    <p>The consequence is worth being clear about: <strong>deleting the app deletes the journal on that device.</strong> Unless iCloud sync is on, there is no other copy to restore from.</p>
+    <p>So export regularly. <strong>Settings → Download journal</strong> saves your whole journal — every entry, every thread and its colour — as a single file. On a Mac you choose where it goes; on an iPhone or iPad it opens the share sheet, where <strong>Save to Files</strong> keeps it. Keep it somewhere you already back up.</p>
     <div class="note">Importing never destroys anything. A day the file does not mention is left alone, and an incoming entry only replaces a local one if it is genuinely newer — so restoring an old backup over newer writing cannot cost you the newer writing.</div>
   </section>
 
   <section id="moving">
     <span class="tag">#moving</span>
-    <h2>Moving to a new Mac</h2>
+    <h2>Moving to a new device</h2>
     <ul>
-      <li>On the old Mac, choose <strong>Settings → Export</strong> and save the file.</li>
+      <li>On the old device, choose <strong>Settings → Download journal</strong> and save the file.</li>
       <li>Copy it across however you like.</li>
-      <li>On the new Mac, install Ariadne and choose <strong>Settings → Import</strong>.</li>
+      <li>On the new one, install Ariadne and choose <strong>Settings → Import a file</strong>.</li>
     </ul>
-    <p>Your entries, threads and thread colours all come across.</p>
+    <p>Your entries, threads and thread colours all come across. With iCloud sync on, on both devices, there is nothing to copy — the journal arrives on its own.</p>
   </section>
 
   <section id="trouble">
@@ -366,7 +366,7 @@ Back to no thread in particular.</div>
     <h2>If something goes wrong</h2>
 
     <h3>My entries are gone</h3>
-    <p>Check that you are signed in to the same macOS user account — Ariadne's storage belongs to your user account, so another account on the same Mac has its own empty journal. If you have an export, <strong>Settings → Import</strong> will restore it without harming anything already there.</p>
+    <p>On a Mac, check that you are signed in to the same macOS user account — Ariadne's storage belongs to your user account, so another account on the same Mac has its own empty journal. If you have an export, <strong>Settings → Import a file</strong> will restore it without harming anything already there.</p>
 
     <h3>Import says the file isn't a Ariadne journal</h3>
     <p>Ariadne imports the file its own Export produces. If the file has been edited by hand and is no longer valid, the app will refuse it rather than import something broken.</p>
@@ -381,8 +381,8 @@ Back to no thread in particular.</div>
   <section id="contact">
     <span class="tag">#contact</span>
     <h2>Getting in touch</h2>
-    <p>Email <a class="fill" href="mailto:cq.feedback@gmail.com">cq.feedback@gmail.com</a>. It helps to include your macOS version, the version of Ariadne from the About panel, and what you expected to happen.</p>
-    <p>Since 0.2, Ariadne can sync between your Macs through your own iCloud. It's off until you turn it on in Settings; on, your entries travel encrypted between your devices and never through a server of ours. If two Macs edited the same day while apart, Ariadne keeps both versions in that day, separated by a divider that says where each came from — sync never discards writing.</p>
+    <p>Email <a class="fill" href="mailto:cq.feedback@gmail.com">cq.feedback@gmail.com</a>. It helps to include your device and its macOS or iOS version, the version of Ariadne (on a Mac, About Ariadne; on iPhone and iPad, its App Store page), and what you expected to happen.</p>
+    <p>Since 0.2, Ariadne can sync between your devices — Mac, iPhone and iPad — through your own iCloud. It's off until you turn it on in Settings; on, your entries travel encrypted between your devices and never through a server of ours. If two devices edited the same day while apart, Ariadne keeps both versions in that day, separated by a divider that says where each came from — sync never discards writing.</p>
   </section>
 
   <footer>
